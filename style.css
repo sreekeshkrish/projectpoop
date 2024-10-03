@@ -26,8 +26,8 @@ img {
     font-family: 'Nunito', sans-serif;
     color: #DD8761;
     font-size: 40px; /* Adjust font size for mobile */
-    line-height: 1.1;
-    margin-top: -10px; /* Adjust margin between text */
+    line-height: 1;
+    margin-top: -35px; /* Adjust margin between text */
 }
 
 body {
