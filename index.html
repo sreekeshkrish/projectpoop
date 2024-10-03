@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
+    <!-- Add Nunito Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poop Tracker</title>
@@ -55,16 +58,25 @@
         }
     </style>
 </head>
-<body>
+<body style="background-color: #FFF4E6;"> <!-- Light background outside the card -->
     <div class="container">
-        <h1>Poop Tracker</h1>
-        <div id="home-page" style="text-align: center;">
-            <!-- Poop Icon (Force Circle) -->
-                <img src="public/images/poop-1.svg" alt="Poop Icon" 
-                style="width: 150px; margin-top: 50px; border-radius: 50%;">
-            <button onclick="showLogPage()">Log Poop</button>
-        </div>
+        <!-- Card with Gradient Background -->
+        <div class="card">
 
+            <!-- Poop Icon (Forced Circle) -->
+            <div id="home-page" style="text-align: center;">
+                <img src="public/images/poop-1.svg" alt="Poop Icon" 
+                     style="width: 150px; margin-top: 50px; border-radius: 50%;">
+
+                <!-- Log Poop Button -->
+                <button onclick="showLogPage()" style="background-color: #28a745; border: none; padding: 15px 30px; font-size: 18px; 
+                                color: white; border-radius: 10px; cursor: pointer; margin-top: 20px;">
+                    Log Poop
+                </button>
+            </div>
+
+        </div>
+    </div>
         <div id="log-page" style="display: none;">
             <h2>Log Your Poop</h2>
             <!-- Date Input -->
