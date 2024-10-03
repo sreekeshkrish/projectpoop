@@ -71,3 +71,17 @@ body {
 .log-poop-btn:hover {
   background: linear-gradient(145deg, #e58a50, #f4a460); /* Hover effect */
 }
+
+.version-info {
+  font-size: 14px;
+  color: #e3a733; /* Same color you want as in your design */
+  text-align: center;
+  margin-top: 30px; /* Adjust the space between button and text */
+  font-family: "Nunito", sans-serif;
+  font-weight: 900;
+}
+
+.version-info a {
+  text-decoration: none;
+  color: #e3a733; /* Same color as version text */
+}
