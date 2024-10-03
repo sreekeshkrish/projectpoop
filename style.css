@@ -1,69 +1,73 @@
 .card {
-    background: linear-gradient(145deg, #ffe29f, #ffcc92); /* Gradient colors */
-    border-radius: 100px; /* Rounded corners */
-    padding: 20px;
-    width: 75%; /* Make the card width responsive */
-    max-width: 320px; /* Max width for larger screens */
-    height: 90vh;
-    margin: 0 auto; /* Center the card */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
-    text-align: center; /* Center the content inside */
+  background: linear-gradient(145deg, #ffe29f, #ffcc92); /* Gradient colors */
+  border-radius: 100px; /* Rounded corners */
+  padding: 20px;
+  width: 75%; /* Make the card width responsive */
+  max-width: 320px; /* Max width for larger screens */
+  height: 90vh;
+  margin: 0 auto; /* Center the card */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+  text-align: center; /* Center the content inside */
 
-     /* Flexbox for vertical centering */
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: center;
+  /* Flexbox for vertical centering */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 img {
-    width: 150px; /* Adjust image size for mobile */
-    margin-top: 20px; /* Adjust margin for spacing */
+  width: 150px; /* Adjust image size for mobile */
+  margin-top: 20px; /* Adjust margin for spacing */
 }
 
 .project-title {
-    font-family: 'Nunito', sans-serif;
-    color: #673823;
-    font-size: 40px; /* Adjust font size for mobile */
-    line-height: 1;
-    margin-top: 10px; /* Reduce margin */
+  font-family: "Nunito", sans-serif;
+  color: #673823;
+  font-size: 40px; /* Adjust font size for mobile */
+  line-height: 1;
+  margin-top: 10px; /* Reduce margin */
 }
 
 .poop-title {
-    font-family: 'Nunito', sans-serif;
-    color: #DD8761;
-    font-size: 40px; /* Adjust font size for mobile */
-    line-height: 1;
-    margin-top: -35px; /* Adjust margin between text */
+  font-family: "Nunito", sans-serif;
+  color: #dd8761;
+  font-size: 40px; /* Adjust font size for mobile */
+  line-height: 1;
+  margin-top: -35px; /* Adjust margin between text */
 }
 
 body {
-    background-color: #FFF4E6; /* Light background color outside the card */
-    font-family: 'Nunito', sans-serif; /* Apply Nunito font to body */
-    height: 100vh; /* Ensure full height of the screen */
-    display: flex;
-    justify-content: center; /* Horizontally center the card */
-    align-items: center; /* Vertically center the card */
-    margin: 0; /* Remove default margin */
+  background-color: #fff4e6; /* Light background color outside the card */
+  font-family: "Nunito", sans-serif; /* Apply Nunito font to body */
+  height: 100vh; /* Ensure full height of the screen */
+  display: flex;
+  justify-content: center; /* Horizontally center the card */
+  align-items: center; /* Vertically center the card */
+  margin: 0; /* Remove default margin */
 }
 
 .log-poop-btn {
-    background: linear-gradient(82deg, #FFA984, #DD774A 82.96%); /* Gradient background */
-    border: none;
-    padding: 15px 90px;
-    font-size: 20px;
-    font-family: 'Nunito', sans-serif; /* Apply Nunito font */
-    font-weight: 700; /* Make the font bold */
-    color: black; /* Text color */
-    border-radius: 24px; /* Rounded button */
-    cursor: pointer;
-    margin-top: -20px;
-    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.12); /* Button shadow */
-    text-transform: lowercase; /* Ensure text is lowercase */
-    width: 100%;
-    max-width: 320px;
+  background: linear-gradient(
+    82deg,
+    #ffa984,
+    #dd774a 82.96%
+  ); /* Gradient background */
+  border: none;
+  padding: 15px 80px;
+  font-size: 20px;
+  font-family: "Nunito", sans-serif; /* Apply Nunito font */
+  font-weight: 700; /* Make the font bold */
+  color: black; /* Text color */
+  border-radius: 24px; /* Rounded button */
+  cursor: pointer;
+  margin-top: -20px;
+  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.12); /* Button shadow */
+  text-transform: lowercase; /* Ensure text is lowercase */
+  width: 100%;
+  max-width: 320px;
 }
 
 .log-poop-btn:hover {
-    background: linear-gradient(145deg, #E58A50, #F4A460); /* Hover effect */
+  background: linear-gradient(145deg, #e58a50, #f4a460); /* Hover effect */
 }
