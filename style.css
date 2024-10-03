@@ -2,8 +2,8 @@
     background: linear-gradient(145deg, #ffe29f, #ffcc92); /* Gradient colors */
     border-radius: 100px; /* Rounded corners */
     padding: 20px;
-    width: 90%; /* Make the card width responsive */
-    max-width: 380px; /* Max width for larger screens */
+    width: 80%; /* Make the card width responsive */
+    max-width: 320px; /* Max width for larger screens */
     height: 90vh;
     margin: 0 auto; /* Center the card */
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
