@@ -11,6 +11,11 @@
 body {
     background-color: #FFF4E6; /* Light background color outside the card */
     font-family: 'Nunito', sans-serif; /* Apply Nunito font to body */
+    height: 100vh; /* Ensure full height of the screen */
+    display: flex;
+    justify-content: center; /* Horizontally center the card */
+    align-items: center; /* Vertically center the card */
+    margin: 0; /* Remove default margin */
 }
 
 .log-poop-btn {
