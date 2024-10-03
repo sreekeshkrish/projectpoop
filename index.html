@@ -58,6 +58,7 @@
         }
     </style>
 </head>
+<div id="home-page"> 
 <body style="background-color: #FFF4E6; margin:0;"> <!-- Light background outside the card -->
         <!-- Card with Gradient Background -->
         <div class="card">
@@ -79,30 +80,24 @@
             </div>
 
         </div>
-        <div id="log-page" style="display: none;">
-            <h2>Log Your Poop</h2>
-            <!-- Date Input -->
-            <label for="poop-date">Date of Poop:</label>
-            <input type="date" id="poop-date">
-            
-            <!-- Time Input -->
-            <label for="poop-time">Time of Poop:</label>
-            <input type="time" id="poop-time">               
-            <h2>Rate Your Poop</h2>         
-            <label for="poop-rating">Poop Rating (1 to 5):</label>
-            <input type="range" id="poop-rating" class="slider" min="1" max="5" value="3">
-            <div class="toggle">
-                <label for="effort">Too much effort?</label>
-                <input type="checkbox" id="effort">
+    </div>
+    <div id="rate-poop-page" style="display:none;">
+        <!-- Rate Poop Page Section -->
+        <div id="rate-poop-page">
+            <div class="rate-container">        
+            <!-- Poop Icon with Resizing -->
+            <div class="poop-icon" style="text-align: center;">
+                <img src="public/images/poop-1.svg" alt="Poop Icon" style="width: 100px; height: 100px; margin-top: 20px;">
             </div>
-            <div class="toggle">
-                <label for="satisfaction">Feel satisfied?</label>
-                <input type="checkbox" id="satisfaction">
+        
+            <!-- Title -->
+            <div class="rate-title" style="text-align: center;">
+                <h1 style="font-size: 40px; margin-bottom: 5px;">rate your</h1>
+                <h2 style="font-size: 40px;">poop</h2>
             </div>
-            <input type="submit" value="Submit" onclick="submitLog()">
-            <button onclick="showHomePage()">Cancel</button>
+            </div>
         </div>
-
+    </div>
         <div id="history-page" style="display: none;">
             <h2>Poop History</h2>
             <div id="history-list" class="history"></div>
@@ -112,8 +107,8 @@
 
     <script>
         function showLogPage() {
-            document.getElementById('home-page').style.display = 'none';
-            document.getElementById('log-page').style.display = 'block';
+            document.getElementById('home-page').style.display = 'none';  // Hide the home page
+            document.getElementById('rate-poop-page').style.display = 'block';  // Show the rate poop page
         }
 
         function showHomePage() {

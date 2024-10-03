@@ -85,3 +85,32 @@ body {
   text-decoration: none;
   color: #e3a733; /* Same color as version text */
 }
+
+/* Container for the Poop Icon and Title */
+.rate-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Poop Icon Style */
+.rate-container .poop-icon img {
+  width: 150px;
+  margin-top: 20px;
+  border-radius: 50%; /* To ensure circular shape */
+}
+
+/* Title Styling */
+.rate-title h1 {
+  font-family: "Nunito", sans-serif;
+  font-size: 44px;
+  font-weight: bold;
+  color: #673823;
+  margin: 10px 0;
+}
+
+.rate-title h2 {
+  font-family: "Nunito", sans-serif;
+  font-size: 44px;
+  font-weight: bold;
+  color: #dd8761;
+}
