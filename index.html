@@ -149,34 +149,24 @@
             historyButton.onclick = showHistoryPage;
             document.getElementById('home-page').appendChild(historyButton);
         }
-// Function to get the current date in IST format
+// Function to get the current date
 function getCurrentDate() {
     const today = new Date();
-    // Adjust to IST by adding 5 hours and 30 minutes to UTC
-    const ISTOffset = 5.5 * 60 * 60 * 1000;
-    const currentISTTime = new Date(today.getTime() + ISTOffset);
-
-    const year = currentISTTime.getFullYear();
-    const month = String(currentISTTime.getMonth() + 1).padStart(2, '0'); // Month is 0-indexed
-    const day = String(currentISTTime.getDate()).padStart(2, '0');
-    
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0'); // Month is 0-indexed
+    const day = String(today.getDate()).padStart(2, '0');
     return `${year}-${month}-${day}`; // Returns YYYY-MM-DD
 }
 
-// Function to get the current time in IST format
+// Function to get the current time
 function getCurrentTime() {
     const today = new Date();
-    // Adjust to IST
-    const ISTOffset = 5.5 * 60 * 60 * 1000;
-    const currentISTTime = new Date(today.getTime() + ISTOffset);
-
-    const hours = String(currentISTTime.getHours()).padStart(2, '0');
-    const minutes = String(currentISTTime.getMinutes()).padStart(2, '0');
-    
+    const hours = String(today.getHours()).padStart(2, '0');
+    const minutes = String(today.getMinutes()).padStart(2, '0');
     return `${hours}:${minutes}`; // Returns HH:MM
 }
 
-// Populate the date and time fields with current values in IST format when the page loads
+// Populate the date and time fields with current values
 window.onload = function() {
     document.getElementById('poop-date').value = getCurrentDate();
     document.getElementById('poop-time').value = getCurrentTime();
