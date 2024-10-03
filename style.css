@@ -4,6 +4,7 @@
     padding: 30px;
     width: 300px;
     margin: 0 auto; /* Center the card */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
     text-align: center; /* Center the content inside */
 }
 
