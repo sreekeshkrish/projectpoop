@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poop Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 400px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        button, input[type="submit"] {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:active, input[type="submit"]:active {
+            background-color: #218838;
+        }
+        .slider {
+            width: 100%;
+        }
+        .toggle {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .history {
+            margin-top: 20px;
+        }
+        .history-entry {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Poop Tracker</h1>
+        <div id="home-page">
+            <button onclick="showLogPage()">Log Poop</button>
+        </div>
+
+        <div id="log-page" style="display: none;">
+            <h2>Rate Your Poop</h2>
+            <label for="poop-rating">Poop Rating (1 to 5):</label>
+            <input type="range" id="poop-rating" class="slider" min="1" max="5" value="3">
+            <div class="toggle">
+                <label for="effort">Too much effort?</label>
+                <input type="checkbox" id="effort">
+            </div>
+            <div class="toggle">
+                <label for="satisfaction">Feel satisfied?</label>
+                <input type="checkbox" id="satisfaction">
+            </div>
+            <input type="submit" value="Submit" onclick="submitLog()">
+            <button onclick="showHomePage()">Cancel</button>
+        </div>
+
+        <div id="history-page" style="display: none;">
+            <h2>Poop History</h2>
+            <div id="history-list" class="history"></div>
+            <button onclick="showHomePage()">Back to Home</button>
+        </div>
+    </div>
+
+    <script>
+        function showLogPage() {
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('log-page').style.display = 'block';
+        }
+
+        function showHomePage() {
+            document.getElementById('log-page').style.display = 'none';
+            document.getElementById('history-page').style.display = 'none';
+            document.getElementById('home-page').style.display = 'block';
+        }
+
+        function showHistoryPage() {
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('log-page').style.display = 'none';
+            document.getElementById('history-page').style.display = 'block';
+
+            // Display the history
+            const historyList = document.getElementById('history-list');
+            historyList.innerHTML = ''; // Clear previous entries
+            const poopLogs = JSON.parse(localStorage.getItem('poopLogs')) || [];
+            poopLogs.forEach(log => {
+                const entryDiv = document.createElement('div');
+                entryDiv.classList.add('history-entry');
+                entryDiv.innerHTML = `
+                    <p>Date: ${log.date}</p>
+                    <p>Rating: ${log.rating}/5</p>
+                    <p>Effort: ${log.effort ? 'Yes' : 'No'}</p>
+                    <p>Satisfied: ${log.satisfaction ? 'Yes' : 'No'}</p>
+                `;
+                historyList.appendChild(entryDiv);
+            });
+        }
+
+        function submitLog() {
+            const rating = document.getElementById('poop-rating').value;
+            const effort = document.getElementById('effort').checked;
+            const satisfaction = document.getElementById('satisfaction').checked;
+            const date = new Date().toLocaleString();
+
+            const poopLog = { date, rating, effort, satisfaction };
+            let poopLogs = JSON.parse(localStorage.getItem('poopLogs')) || [];
+            poopLogs.push(poopLog);
+            localStorage.setItem('poopLogs', JSON.stringify(poopLogs));
+
+            alert('Poop log submitted!');
+            showHomePage();
+        }
+
+        // Show the history on load (for the user to click manually)
+        window.onload = function() {
+            const historyButton = document.createElement('button');
+            historyButton.innerText = 'View History';
+            historyButton.onclick = showHistoryPage;
+            document.getElementById('home-page').appendChild(historyButton);
+        }
+    </script>
+</body>
+</html>
